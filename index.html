@@ -1,3 +1,84 @@
 <!DOCTYPE html>
-Tensors are just chonky matrices!
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
+    <title>particles.js – A lightweight, dependency-free and responsive javascript plugin for particle backgrounds.</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <header class="header">
+      <ul class="header__meta">
+        <li>Meta 1: <strong>nil</strong></li>
+        <li>License: <strong>MIT</strong></li>
+      </ul>
+
+      <div class="container">
+        <div class="header__introduction">
+          <h1>Tensors are just chonky matrices.</h1>
+          <p>x is just ...</p>
+
+          <div class="buttons">
+            <a class="button button--primary button--download">
+              <div class="button__text">
+                <!-- <span class="button__action">Show Me</span> -->
+                <span class="button__kind">Another!</span>
+              </div>
+            </a>
+            <!-- <a class="button button--secondary button--github" href="https://github.com/marcbruederlin/particles.js" target="_blank">
+              <div class="button__icon"></div>
+              <div class="button__text">
+                <span class="button__action">View on</span>
+                <span class="button__kind">GitHub</span>
+              </div>
+            </a> -->
+          </div>
+        </div>
+      </div>
+
+      <canvas class="header__background"></canvas>
+    </header>
+
+
+    <footer class="footer">
+      <div class="container container--large">
+        Created by: Jariullah Safi <a href="#" class="fa fa-twitter"></a> <a href="#" class="fa fa-github"></a> </a> <a href="#" class="fa fa-youtube"></a>
+      </div>
+    </footer>
+
+    <footer class="footer nofade">
+      <div class="container container--large nofade">
+        Website design shamelessly stolen from <a href="https://github.com/marcbruederlin"
+          target="_blank">marcbruederlin</a>
+      </div>
+    </footer>
+
+    <script src="https://npmcdn.com/particlesjs@2.2.2/dist/particles.min.js"></script>
+    <script>
+      window.onload = function() {
+        Particles.init({
+          selector: '.header__background',
+          color: '#75A5B7',
+          maxParticles: 130,
+          connectParticles: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              options: {
+                maxParticles: 80
+              }
+            }, {
+              breakpoint: 375,
+              options: {
+                maxParticles: 50
+              }
+            }
+          ]
+        });
+      };
+    </script>
+  </body>
 </html>
